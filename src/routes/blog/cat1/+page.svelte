@@ -3,8 +3,8 @@
 </script>
 
 <div class="category-page">
-  <h1>Sample Category3</h1>
-  <PostList categoryId="cat003" />
+  <h1>PAシステム基礎</h1> <!--カテゴリ名を表示-->
+  <PostList categoryId="cat1" /> <!--カテゴリIDで記事の絞り込み-->
 </div>
 
 <style>
