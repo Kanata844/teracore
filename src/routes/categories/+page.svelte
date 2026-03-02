@@ -1,8 +1,8 @@
 <script>
   import { categories, getPostsByCategory } from '$lib/data';
-  import { resolve } from '$lib/utils/paths';
+  import { resolve } from '$app/paths';
 
-  $: categoryStats = categories.map(cat => ({
+  let categoryStats = categories.map(cat => ({
     ...cat,
     postCount: getPostsByCategory(cat.id).length,
   }));
@@ -17,7 +17,7 @@
 
   {#if categoryStats.length > 0}
     <div class="results-header">
-      全{getTotalCount()}件中 {getStartItem()}–{getEndItem()}件を表示
+      全{getTotalCount()}件中 {getStartItem()}-{getEndItem()}件を表示
     </div>
   {/if}
 

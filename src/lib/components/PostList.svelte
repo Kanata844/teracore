@@ -1,36 +1,36 @@
 <script>
   import { getPostsByCategory, getWriterById, writers } from '$lib/data';
-  import { resolve } from '$lib/utils/paths';
+  import { resolve } from '$app/paths';
 
-  export let categoryId;
+  let {categoryId} = $props();
 
   const ITEMS_PER_PAGE = 20;
   
-  let currentPage = 1;
-  let filterath = '';
-  let sortOrder = 'desc'; // 'desc' | 'asc'
+  let currentPage = $state(1);
+  let filterath = $state('');
+  let sortOrder = $state('desc'); // 'desc' | 'asc'
 
-  $: allPosts = getPostsByCategory(categoryId);
+  let allPosts = $derived(getPostsByCategory(categoryId));
   
-  $: filteredPosts = allPosts.filter(post => {
+  let filteredPosts = $derived(allPosts.filter(post => {
     if (filterath && post.ath !== filterath) return false;
     return true;
-  });
+  }));
 
-  $: sortedPosts = [...filteredPosts].sort((a, b) => {
+  let sortedPosts = $derived([...filteredPosts].sort((a, b) => {
     const comparison = a.date.localeCompare(b.date);
     return sortOrder === 'desc' ? -comparison : comparison;
-  });
+  }));
 
-  $: totalPages = Math.ceil(sortedPosts.length / ITEMS_PER_PAGE);
-  $: paginatedPosts = sortedPosts.slice(
+  let totalPages = $derived(Math.ceil(sortedPosts.length / ITEMS_PER_PAGE));
+  let paginatedPosts = $derived(sortedPosts.slice(
     (currentPage - 1) * ITEMS_PER_PAGE,
     currentPage * ITEMS_PER_PAGE
-  );
+  ));
 
-  $: if (currentPage > totalPages && totalPages > 0) {
-    currentPage = totalPages;
-  }
+  // $: if (currentPage > totalPages && totalPages > 0) {
+  //   currentPage = totalPages;
+  // }
 
   const resetFilters = () => {
     currentPage = 1;

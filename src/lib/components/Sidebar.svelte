@@ -1,8 +1,9 @@
 <script>
-  import { resolve } from '$lib/utils/paths';
+  import { resolve } from '$app/paths';
   import { categories } from '$lib/data';
-  import { sidebarOpen } from '$lib/stores/sidebar';
   
+  let {sidebarOpen = $bindable()} = $props();
+
   let grouped = {};
 
   categories.forEach(cat => {
@@ -17,19 +18,19 @@
   const letters = Object.keys(grouped).sort();
 
   const toggleSidebar = () => {
-    sidebarOpen.update(value => !value);
+    sidebarOpen = !sidebarOpen;
   };
 
   const closeSidebar = () => {
     if (window.innerWidth <= 768) {
-      sidebarOpen.set(false);
+      sidebarOpen = false;
     }
   };
 </script>
 
-<aside class:closed={!$sidebarOpen} class:mobile-overlay={$sidebarOpen}>
+<aside class="{sidebarOpen? "mobile-overlay open": "closed"}">
   <div class="sidebar-header">
-    <button class="toggle-btn" on:click={toggleSidebar} aria-label="Toggle sidebar">
+    <button class="toggle-btn" onclick={toggleSidebar} aria-label="Toggle sidebar">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <line x1="3" y1="6" x2="21" y2="6" />
         <line x1="3" y1="12" x2="21" y2="12" />
@@ -38,14 +39,14 @@
     </button>
   </div>
 
-  {#if $sidebarOpen}
+  {#if sidebarOpen}
 
     {#each letters as letter}
       <div class="category-group">
         <h4>{letter}</h4>
         <ul>
           {#each grouped[letter] as cat}
-            <li><a href={cat.path} on:click={closeSidebar}>{cat.name}</a></li>
+            <li><a href={cat.path} onclick={closeSidebar}>{cat.name}</a></li>
           {/each}
         </ul>
       </div>
@@ -77,7 +78,7 @@ aside {
 aside.closed {
   width: 60px;
   padding: 1rem 0.5rem;
-  align-items: center;
+  /* align-items: center; */ /*なんでこんなコード書いたんやAI*/
 }
 
 .sidebar-header {
