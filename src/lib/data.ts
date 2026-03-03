@@ -37,7 +37,7 @@ export const posts: Post[] = [
     cat: 'cat1',
     path: '/blog/cat1/log1',
     thum: '/blog/cat1/log1/thumbnail.png',
-    title: 'SvelteKit 書き方まとめ',
+    title: 'Ⅰ PA機材のいろは スピーカから音が鳴るまで',
     ath: 'fumi',
     date: '2026-02-21',
   },
