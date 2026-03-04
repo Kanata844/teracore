@@ -23,12 +23,16 @@ export interface Post {
 export const writers: Writer[] = [
   { id: 'fumi', name: 'Fumi', icon: '/icons/ath1.png' },
   { id: 'kanata', name: 'Kanata', icon: '' },
+  { id: 'kinako', name: 'きなこ氏', icon: '' },
 
 ];
 
 export const categories: Category[] = [
   { id: 'cat1', name: 'PAシステム基礎', path: '/blog/cat1' },
   { id: 'cat2', name: 'デジタルケーブル基礎', path: '/blog/cat2'},
+  { id: 'cat3', name: '音声技術学Ⅰ（基礎）', path:  '/blog/cat3'},
+  { id: 'cat4', name: '音声技術学Ⅱ（理論）', path: '/blog/cat4'},
+  { id: 'cat5', name: '音声技術学Ⅲ（発展）/ DTM', path: '/blog/cat5'},
 ];
 
 export const posts: Post[] = [
@@ -87,6 +91,22 @@ export const posts: Post[] = [
     title: '5.ネットワークを作るケーブル',
     ath: 'kanata',
     date: '2026-03-04',
+  },
+  {
+    id: 'file3-1',
+    cat: 'cat3',
+    path: '/blog/cat3/file3-1',
+    title: 'Ⅰ / 第一講「音声ファイルとは」',
+    ath: 'kinako',
+    date: '2026-03-05',
+  },
+  {
+    id: 'file4-1',
+    cat: 'cat4',
+    path: '/blog/cat4/file4-1',
+    title: 'Ⅱ / 第一講「音声ファイル切り貼りの極意」',
+    ath: 'kinako',
+    date: '2026-03-05',
   },
 ];
 
