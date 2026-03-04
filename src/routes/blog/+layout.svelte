@@ -10,7 +10,7 @@
 
 <style>
   .content {
-    max-width: 90%;
+    max-width: 75%;
     margin: 0 auto;
     padding: 3rem 2rem;
     line-height: 1.9;
@@ -106,7 +106,7 @@
 
 
   .simplelog :global(img) {
-    max-width: 90%;
+    max-width: 60%;
     border-radius: 12px;
     margin: 2.5rem auto;
     display: block;

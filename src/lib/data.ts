@@ -21,8 +21,8 @@ export interface Post {
 }
 
 export const writers: Writer[] = [
-  { id: 'ath1', name: 'Fumi', icon: '/icons/ath1.png' },
-  { id: 'ath2', name: 'Kanata', icon: '' },
+  { id: 'fumi', name: 'Fumi', icon: '/icons/ath1.png' },
+  { id: 'kanata', name: 'Kanata', icon: '' },
 
 ];
 
@@ -33,20 +33,27 @@ export const categories: Category[] = [
 
 export const posts: Post[] = [
   {
-    id: 'log1',
+    id: 'fumi1',
     cat: 'cat1',
-    path: '/blog/cat1/log1',
-    thum: '/blog/cat1/log1/thumbnail.png',
-    title: 'Ⅰ PA機材のいろは スピーカから音が鳴るまで',
-    ath: 'ath1',
-    date: '2026-02-21',
+    path: '/blog/cat1/fumi1',
+    title: '第一回 PA機材のいろは スピーカから音が鳴るまで',
+    ath: 'fumi',
+    date: '2026-03-03',
   },
   {
+    id: 'fumi2',
+    cat: 'cat1',
+    path: '/blog/cat1/fumi2',
+    title: '第二回 信号の種類① バランス信号とアンバランス信号',
+    ath: 'fumi',
+    date: '2026-03-04',
+  },
+    {
     id: 'cat2-log1',
     cat: 'cat2',
     path: '/blog/cat2/log1',
     title: '1.デジタルケーブル、デジタル信号とは',
-    ath: 'ath2',
+    ath: 'kanata',
     date: '2026-03-04',
   },
   {
@@ -54,7 +61,7 @@ export const posts: Post[] = [
     cat: 'cat2',
     path: '/blog/cat2/log2',
     title: '2.デジタル信号の用途',
-    ath: 'ath2',
+    ath: 'kanata',
     date: '2026-03-04',
   },
   {
@@ -62,7 +69,7 @@ export const posts: Post[] = [
     cat: 'cat2',
     path:  '/blog/cat2/log3',
     title: '3.映像を伝えるケーブル①',
-    ath: 'ath2',
+    ath: 'kanata',
     date: '2026-03-04',
   },
   {
@@ -70,7 +77,7 @@ export const posts: Post[] = [
     cat: 'cat2',
     path:  '/blog/cat2/log4',
     title: '4.映像を伝えるケーブル②',
-    ath: 'ath2',
+    ath: 'kanata',
     date: '2026-03-04',
   },
   {
@@ -78,7 +85,7 @@ export const posts: Post[] = [
     cat: 'cat2',
     path:  '/blog/cat2/log5',
     title: '5.ネットワークを作るケーブル',
-    ath: 'ath2',
+    ath: 'kanata',
     date: '2026-03-04',
   },
 ];
