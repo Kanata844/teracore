@@ -28,7 +28,7 @@ export const writers: Writer[] = [
 
 export const categories: Category[] = [
   { id: 'cat1', name: 'PAシステム基礎', path: '/blog/cat1' },
-
+  { id: 'cat2', name: 'デジタルケーブル基礎', path: '/blog/cat2'},
 ];
 
 export const posts: Post[] = [
@@ -38,11 +38,49 @@ export const posts: Post[] = [
     path: '/blog/cat1/log1',
     thum: '/blog/cat1/log1/thumbnail.png',
     title: 'Ⅰ PA機材のいろは スピーカから音が鳴るまで',
-    ath: 'fumi',
+    ath: 'ath1',
     date: '2026-02-21',
   },
-
-  
+  {
+    id: 'cat2-log1',
+    cat: 'cat2',
+    path: '/blog/cat2/log1',
+    title: '1.デジタルケーブル、デジタル信号とは',
+    ath: 'ath2',
+    date: '2026-03-04',
+  },
+  {
+    id: 'cat2-log2',
+    cat: 'cat2',
+    path: '/blog/cat2/log2',
+    title: '2.デジタル信号の用途',
+    ath: 'ath2',
+    date: '2026-03-04',
+  },
+  {
+    id: 'cat2-log3',
+    cat: 'cat2',
+    path:  '/blog/cat2/log3',
+    title: '3.映像を伝えるケーブル①',
+    ath: 'ath2',
+    date: '2026-03-04',
+  },
+  {
+    id: 'cat2-log4',
+    cat: 'cat2',
+    path:  '/blog/cat2/log4',
+    title: '4.映像を伝えるケーブル②',
+    ath: 'ath2',
+    date: '2026-03-04',
+  },
+  {
+    id: 'cat2-log5',
+    cat: 'cat2',
+    path:  '/blog/cat2/log5',
+    title: '5.ネットワークを作るケーブル',
+    ath: 'ath2',
+    date: '2026-03-04',
+  },
 ];
 
 export function getPostsByCategory(categoryId: string): Post[] {
