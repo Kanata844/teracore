@@ -33,15 +33,21 @@ export const categories: Category[] = [
 
 export const posts: Post[] = [
   {
-    id: 'log1',
+    id: 'fumi1',
     cat: 'cat1',
-    path: '/blog/cat1/log1',
-    thum: '/blog/cat1/log1/thumbnail.png',
-    title: 'Ⅰ PA機材のいろは スピーカから音が鳴るまで',
+    path: '/blog/cat1/fumi1',
+    title: '第一回 PA機材のいろは スピーカから音が鳴るまで',
     ath: 'fumi',
-    date: '2026-02-21',
+    date: '2026-03-04',
   },
-
+  {
+    id: 'fumi2',
+    cat: 'cat1',
+    path: '/blog/cat1/fumi2',
+    title: '第二回 信号の種類① バランス信号とアンバランス信号',
+    ath: 'fumi',
+    date: '2026-03-04',
+  },
   
 ];
 
