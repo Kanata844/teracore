@@ -88,6 +88,14 @@ export const posts: Post[] = [
     ath: 'kanata',
     date: '2026-03-04',
   },
+  {
+    id: 'cat2-log6',
+    cat: 'cat2',
+    path: '/blog/cat2/log6',
+    title: '6.パソコンと周辺機器を繋ぐケーブル',
+    ath: 'kanata',
+    date: '2026-03-04',
+  },
 ];
 
 export function getPostsByCategory(categoryId: string): Post[] {
