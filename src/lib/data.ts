@@ -21,8 +21,8 @@ export interface Post {
 }
 
 export const writers: Writer[] = [
-  { id: 'ath1', name: 'Fumi', icon: '/icons/ath1.png' },
-  { id: 'ath2', name: 'Kanata', icon: '' },
+  { id: 'fumi', name: 'Fumi', icon: '/icons/ath1.png' },
+  { id: 'kanata', name: 'Kanata', icon: '' },
 
 ];
 
