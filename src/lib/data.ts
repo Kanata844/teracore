@@ -24,7 +24,7 @@ export const writers: Writer[] = [
   { id: 'fumi', name: 'Fumi', icon: '/icons/ath1.png' },
   { id: 'kanata', name: 'Kanata', icon: '' },
   { id: 'kinako', name: 'きなこ氏', icon: '' },
-
+  { id: '556', name: '556', icon: '' },
 ];
 
 export const categories: Category[] = [
@@ -33,6 +33,7 @@ export const categories: Category[] = [
   { id: 'cat3', name: '音声技術学Ⅰ（基礎）', path:  '/blog/cat3'},
   { id: 'cat4', name: '音声技術学Ⅱ（理論）', path: '/blog/cat4'},
   { id: 'cat5', name: '音声技術学Ⅲ（発展）/ DTM', path: '/blog/cat5'},
+  { id: 'cat06', name: 'AviUtlスクリプト（Lua）', path: '/blog/cat06'},
 ];
 
 export const posts: Post[] = [
@@ -163,7 +164,15 @@ export const posts: Post[] = [
     title: '9.複雑化したUSB規格',
     ath: 'kanata',
     date: '2026-03-07',
-  }
+  },
+  {
+    id: 'cat06-01',
+    cat: 'cat06',
+    path: '/blog/cat06/cat06-01',
+    title: '1.AviUtlスクリプトとは',
+    ath: '556',
+    date: '2026-03-08',
+  },
 ];
 
 export function getPostsByCategory(categoryId: string): Post[] {
