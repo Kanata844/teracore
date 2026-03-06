@@ -24,7 +24,7 @@ export const writers: Writer[] = [
   { id: 'fumi', name: 'Fumi', icon: '/icons/ath1.png' },
   { id: 'kanata', name: 'Kanata', icon: '' },
   { id: 'kinako', name: 'きなこ氏', icon: '' },
-
+  { id: '556', name: '556', icon: '' },
 ];
 
 export const categories: Category[] = [
@@ -33,6 +33,7 @@ export const categories: Category[] = [
   { id: 'cat3', name: '音声技術学Ⅰ（基礎）', path:  '/blog/cat3'},
   { id: 'cat4', name: '音声技術学Ⅱ（理論）', path: '/blog/cat4'},
   { id: 'cat5', name: '音声技術学Ⅲ（発展）/ DTM', path: '/blog/cat5'},
+  { id: 'cat6', name: 'AviUtlスクリプト（Lua）', path: '/blog/cat6'},
 ];
 
 export const posts: Post[] = [
@@ -146,6 +147,14 @@ export const posts: Post[] = [
     path: '/blog/cat1/fumi5',
     title: '第五回 端子の変換ケーブル',
     ath: 'kanata',
+    date: '2026-03-06',
+  },
+  {
+    id: '556_20260306',
+    cat: 'cat6',
+    path: '/blog/cat6/556_20260306',
+    title: '1.AviUtlスクリプトとは',
+    ath: '556',
     date: '2026-03-06',
   },
 ];
