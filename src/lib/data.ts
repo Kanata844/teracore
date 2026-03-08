@@ -33,11 +33,7 @@ export const categories: Category[] = [
   { id: 'cat3', name: '音声技術学Ⅰ（基礎）', path:  '/blog/cat3'},
   { id: 'cat4', name: '音声技術学Ⅱ（理論）', path: '/blog/cat4'},
   { id: 'cat5', name: '音声技術学Ⅲ（発展）/ DTM', path: '/blog/cat5'},
-<<<<<<< HEAD
   { id: 'cat06', name: 'AviUtlスクリプト（Lua）', path: '/blog/cat06'},
-=======
-  { id: 'cat6', name: 'AviUtlスクリプト（Lua）', path: '/blog/cat6'},
->>>>>>> 8460c55f26e508ddd95a0ce55be79853504bd70d
 ];
 
 export const posts: Post[] = [
@@ -154,7 +150,6 @@ export const posts: Post[] = [
     date: '2026-03-06',
   },
   {
-<<<<<<< HEAD
     id: 'log8',
     cat: 'cat2',
     path: '/blog/cat2/log8',
@@ -177,14 +172,6 @@ export const posts: Post[] = [
     title: '1.AviUtlスクリプトとは',
     ath: '556',
     date: '2026-03-08',
-=======
-    id: '556_20260306',
-    cat: 'cat6',
-    path: '/blog/cat6/556_aviutlscript-01',
-    title: '1.AviUtlスクリプトとは',
-    ath: '556',
-    date: '2026-03-06',
->>>>>>> 8460c55f26e508ddd95a0ce55be79853504bd70d
   },
 ];
 
