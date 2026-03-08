@@ -163,7 +163,23 @@ export const posts: Post[] = [
     title: '9.複雑化したUSB規格',
     ath: 'kanata',
     date: '2026-03-07',
-  }
+  },
+  {
+    id: 'log10',
+    cat: 'cat2',
+    path: '/blog/cat2/log10',
+    title: '10.USBハブの役割',
+    ath: 'kanata',
+    date: '2026-03-08',
+  },
+  {
+    id: 'log11',
+    cat: 'cat2',
+    path: '/blog/cat2/log11',
+    title: '11.HDMI分配器',
+    ath: 'kanata',
+    date: '2026-03-08',
+  },
 ];
 
 export function getPostsByCategory(categoryId: string): Post[] {
