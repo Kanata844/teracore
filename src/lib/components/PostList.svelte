@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { getPostsByCategory, getWriterById, writers } from '$lib/data';
+  import { getArticlesByCategory, getWriterById, writers } from '$lib/data';
   import { resolve } from '$app/paths';
 
   let {categoryId} = $props();
@@ -10,7 +10,7 @@
   let filterath = $state('');
   let sortOrder = $state('desc'); // 'desc' | 'asc'
 
-  let allPosts = $derived(getPostsByCategory(categoryId));
+  let allPosts = $derived(getArticlesByCategory(categoryId));
   
   let filteredPosts = $derived(allPosts.filter(post => {
     if (filterath && post.ath !== filterath) return false;

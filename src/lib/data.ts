@@ -12,7 +12,7 @@ export interface Category {
   path: string;
 }
 
-export interface Post {
+export interface Article {
   id: string;
   cat: string;
   path: string;
@@ -20,202 +20,40 @@ export interface Post {
   title: string;
   ath: string;
   date: string;
+  index: number;
 }
 
 export const writers: Writer[] = [
-  { id: 'fumi', name: 'Fumi', icon: '/icons/ath1.png' },
-  { id: 'kanata', name: 'Kanata', icon: '' },
-  { id: 'kinako', name: 'きなこ氏', icon: '' },
-
+  { id: '01', name: 'Fumi', icon: '/icons/ath1.png' },
+  { id: '02', name: 'Kanata', icon: '' },
+  { id: '03', name: 'きなこ氏', icon: '' },
+  { id: '04', name: '556', icon: '' },
 ];
 
 export const categories: Category[] = [
-  { id: 'cat1', name: 'PAシステム基礎', path: '/blog/cat1' },
-  { id: 'cat2', name: 'デジタルケーブル基礎', path: '/blog/cat2'},
-  { id: 'cat3', name: '音声技術学Ⅰ（基礎）', path:  '/blog/cat3'},
-  { id: 'cat4', name: '音声技術学Ⅱ（理論）', path: '/blog/cat4'},
-  { id: 'cat5', name: '音声技術学Ⅲ（発展）/ DTM', path: '/blog/cat5'},
+  { id: '01-cat1', name: 'PAシステム基礎', path: '/blog/01-cat1' },
+  { id: '02-cat2', name: 'デジタルケーブル基礎', path: '/blog/02-cat2'},
+  { id: '03-cat3', name: '音声技術学Ⅰ（基礎）', path:  '/blog/03-cat3'},
+  { id: '03-cat4', name: '音声技術学Ⅱ（理論）', path: '/blog/03-cat4'},
+  { id: '03-cat5', name: '音声技術学Ⅲ（発展）/ DTM', path: '/blog/03-cat5'},
+  { id: '04-aviutlscript', name: 'AviUtlスクリプト（Lua）', path: '/blog/04-aviutlscript'},
 ];
 
-export const posts: Post[] = [
-  {
-    id: 'fumi1',
-    cat: 'cat1',
-    path: '/blog/cat1/fumi1',
-    title: '第一回 音がスピーカから鳴るまでの流れ',
-    ath: 'fumi',
-    date: '2026-03-03',
-  },
-  {
-    id: 'fumi2',
-    cat: 'cat1',
-    path: '/blog/cat1/fumi2',
-    title: '第二回 信号の種類① バランス信号とアンバランス信号',
-    ath: 'fumi',
-    date: '2026-03-04',
-  },
-    {
-    id: 'cat2-log1',
-    cat: 'cat2',
-    path: '/blog/cat2/log1',
-    title: '1.デジタル信号とは',
-    ath: 'kanata',
-    date: '2026-03-04',
-  },
-  {
-    id: 'cat2-log2',
-    cat: 'cat2',
-    path: '/blog/cat2/log2',
-    title: '2.デジタル信号の用途',
-    ath: 'kanata',
-    date: '2026-03-04',
-  },
-  {
-    id: 'cat2-log3',
-    cat: 'cat2',
-    path:  '/blog/cat2/log3',
-    title: '3.映像を伝えるケーブル①',
-    ath: 'kanata',
-    date: '2026-03-04',
-  },
-  {
-    id: 'cat2-log4',
-    cat: 'cat2',
-    path:  '/blog/cat2/log4',
-    title: '4.映像を伝えるケーブル②',
-    ath: 'kanata',
-    date: '2026-03-04',
-  },
-  {
-    id: 'cat2-log5',
-    cat: 'cat2',
-    path:  '/blog/cat2/log5',
-    title: '5.ネットワークを作るケーブル',
-    ath: 'kanata',
-    date: '2026-03-04',
-  },
-  {
-    id: 'fumi3',
-    cat: 'cat1',
-    path: '/blog/cat1/fumi3',
-    title: '第三回 信号の種類② マイクレベルとラインレベル',
-    ath: 'fumi',
-    date: '2026-03-05',
-  },
-  {
-    id: 'file3-1',
-    cat: 'cat3',
-    path: '/blog/cat3/file3-1',
-    title: 'Ⅰ / 第一講「音声ファイルとは」',
-    ath: 'kinako',
-    date: '2026-03-05',
-  },
-  {
-    id: 'file4-1',
-    cat: 'cat4',
-    path: '/blog/cat4/file4-1',
-    title: 'Ⅱ / 第一講「音声ファイル切り貼りの極意」',
-    ath: 'kinako',
-    date: '2026-03-05',
-   },
-   {
-    id: 'cat2-log6',
-    cat: 'cat2',
-    path: '/blog/cat2/log6',
-    title: '6.パソコンと周辺機器を繋ぐケーブル①',
-    ath: 'kanata',
-    date: '2026-03-04',
-  },
-  {
-    id: 'cat2-log7',
-    cat: 'cat2',
-    path: '/blog/cat2/log7',
-    title: '7.パソコンと周辺機器を繋ぐケーブル②',
-    ath: 'kanata',
-    date: '2026-03-04',
-  },
-  {
-    id: 'fumi4',
-    cat: 'cat1',
-    path: '/blog/cat1/fumi4',
-    title: '第四回 具体的な端子の種類',
-    ath: 'kanata',
-    date: '2026-03-06',
-  },
-  {
-    id: 'fumi5',
-    cat: 'cat1',
-    path: '/blog/cat1/fumi5',
-    title: '第五回 端子の変換ケーブル',
-    ath: 'kanata',
-    date: '2026-03-06',
-  },
-  {
-    id: 'log8',
-    cat: 'cat2',
-    path: '/blog/cat2/log8',
-    title: '8.充電するためのケーブル',
-    ath: 'kanata',
-    date: '2026-03-06',
-  },
-  {
-    id: 'log9',
-    cat: 'cat2',
-    path: '/blog/cat2/log9',
-    title: '9.複雑化したUSB規格',
-    ath: 'kanata',
-    date: '2026-03-07',
-  },
-  {
-    id: 'log10',
-    cat: 'cat2',
-    path: '/blog/cat2/log10',
-    title: '10.USBハブの役割',
-    ath: 'kanata',
-    date: '2026-03-08',
-  },
-  {
-    id: 'log11',
-    cat: 'cat2',
-    path: '/blog/cat2/log11',
-    title: '11.HDMI分配器',
-    ath: 'kanata',
-    date: '2026-03-08',
-  },
-  {
-    id: 'log12',
-    cat: 'cat2',
-    path: '/blog/cat2/log12',
-    title: '12.キャプチャーボードとATEM',
-    ath: 'kanata',
-    date: '2026-03-08',
-  },
-  {
-    id: 'log13',
-    cat: 'cat2',
-    path: '/blog/cat2/log13',
-    title: '13.映像信号をLANケーブルで伝える',
-    ath: 'kanata',
-    date: '2026-03-08',
-  },
-];
-
-let articles: Post[]= [];
+let articles: Article[]= [];
 const modules = import.meta.glob("/src/routes/blog/*/articles.ts", {import: "articles", eager: true});
 for(const path in modules){
-  articles = articles.concat(modules[path] as Post[]);
+  articles = articles.concat(modules[path] as Article[]);
 }
-console.log(articles);
 
-export function getPostsByCategory(categoryId: string): Post[] {
+export function getArticlesByCategory(categoryId: string): Article[] {
   if (categoryId === 'all') {
-    return posts;
+    return articles;
   }
-  return posts.filter((post) => post.cat === categoryId);
+  return articles.filter((article) => article.cat === categoryId);
 }
 
-export function getPostsByath(athId: string): Post[] {
-  return posts.filter((post) => post.ath === athId);
+export function getArticlesByath(athId: string): Article[] {
+  return articles.filter((article) => article.ath === athId);
 }
 
 export function getCategoryById(categoryId: string): Category | undefined {
@@ -226,6 +64,6 @@ export function getWriterById(writerId: string): Writer | undefined {
   return writers.find((writer) => writer.id === writerId);
 }
 
-export function getPostByPathname(url: string){
-  return posts.find((post) => resolve(post.path as any) === url);
+export function getArticleByPathname(url: string){
+  return articles.find((article) => resolve(article.path as any) === url);
 }
