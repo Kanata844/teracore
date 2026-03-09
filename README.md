@@ -1,7 +1,3 @@
-<style>
-th, td {border: 1px solid;}
-</style>
-
 # 新規作成と命名規則
 
 ブランチ以外の作成手順と、命名規則を書きます。  
