@@ -200,6 +200,13 @@ export const posts: Post[] = [
   },
 ];
 
+let articles: Post[]= [];
+const modules = import.meta.glob("/src/routes/blog/*/articles.ts", {import: "articles", eager: true});
+for(const path in modules){
+  articles = articles.concat(modules[path] as Post[]);
+}
+console.log(articles);
+
 export function getPostsByCategory(categoryId: string): Post[] {
   if (categoryId === 'all') {
     return posts;
