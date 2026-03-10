@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Pager from '$lib/components/Pager-556.svelte';
   let {children} = $props();
 </script>
 
@@ -10,15 +11,14 @@
 </main>
 
 <style>
-
-  @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Zen+Maru+Gothic:wght@500;700&display=swap');
 
   :root{
     --bg-color: #fdfdfd;
     --main-color: #003160;
     --sub-color: #e6edf5;
     --p-color: #111;
-    --th-color: #fff;    
+    --th-color: #fff;
 
     --pre-bg-color: #262626;
     --pre-code-color: #fdfdfd;
@@ -36,8 +36,19 @@
     }
   }
 
+  /*Pager-556用*/
+  .simplelog:global(.pager .inner){
+    background: var(--bg-color) !important;
+    border-color: var(--p-color);
+  }
+
+
   .simplelog{
     overflow: hidden;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 3rem;
   }
   .bg{
     width: 100%;
@@ -49,18 +60,19 @@
   .content {
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 24px;
-    padding-top: 1rem;
+    padding: 1rem 36px 1rem;
     line-height: 1.75;
     color: var(--p-color);
-    font-family: "M PLUS 1p", sans-serif;
-    font-weight: 500;
+  }
+
+  ::selection {
+  background-color: #c7c7c7;
   }
 
   .simplelog :global(h1) {
     color: var(--main-color);
     font-size: var(--font-size-h1);
-    margin: 1rem 0 1.5rem;
+    margin: 1rem 0 3rem;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid var(--main-color);
   }
@@ -77,7 +89,7 @@
   }
   .simplelog :global(p){
     font-size: var(--font-size-p);
-    margin: 1.5rem 0;
+    margin: 1rem 0;
   }
   
   .simplelog :global(hr) {
@@ -95,39 +107,40 @@
   /*.simplelog :global(em) {
     }*/
     
-    .simplelog :global(ul),
-    .simplelog :global(ol) {
-      margin: 1.5rem 0;
-      padding-left: 1.5rem;
-    }
-    .simplelog :global(li) {
-      font-size: var(--font-size-p);
-      margin: 0.5rem 0;
-    }
-    .simplelog :global(li::marker) {
-      color: var(--main-color);
-      font-weight: bold;
-    }
-
-    .simplelog :global(a) {
+  .simplelog :global(ul),.simplelog :global(ol){
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+  }
+  .simplelog :global(li) {
+    font-size: var(--font-size-p);
+    margin: 0.5rem 0;
+  }
+  .simplelog :global(li::marker) {
+    color: var(--main-color);
+    font-weight: bold;
+  }
+  
+  .simplelog :global(a){
       color: var(--main-color);
       text-decoration: none;
-      padding: 0 4px;
-      border-bottom: 1px solid var(--main-color);
       transition: 0.2s ease;
-    }
-    
-    .simplelog :global(a:hover) {
-      background: var(--main-color);
-      color: var(--th-color);
-      border-radius: 0.25rem;
-    }
-    
-    .simplelog :global(code) {
-      font-size: calc(var(--font-size-p) * 0.9);
-      padding: 0.2rem 0.3rem;
-      background: var(--sub-color);
-      border-radius: 0.25rem;
+      border-color: var(--main-color);
+  }
+  .simplelog :global(a:not(.pager a)) {
+    padding: 0 2px;
+    border-bottom: 1px solid var(--main-color);
+    border-radius: 0.25rem;
+  }
+  .simplelog :global(a:hover) {
+    background: var(--main-color);
+    color: var(--th-color);
+  }
+  
+  .simplelog :global(code) {
+    font-size: calc(var(--font-size-p) * 0.9);
+    padding: 0.2rem 0.3rem;
+    background: var(--sub-color);
+    border-radius: 0.25rem;
   }
   .simplelog :global(pre) {
     font-size: 0.9rem;
@@ -137,6 +150,7 @@
     border-radius: 10px;
     margin: 2rem 0;
     overflow-x: auto;
+    line-height: 1.25 !important;
   }
   .simplelog :global(pre code) {
     background: transparent;
