@@ -48,7 +48,7 @@ export const articles: Article[] = [
     },
     {
     id: '01-pasystem_f-06',
-    cat: 'cat1',
+    cat: '01-pasystem_f',
     path: '/blog/01-pasystem_f/06',
     title: '第六回 マイクの基礎',
     ath: '01',
