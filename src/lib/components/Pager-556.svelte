@@ -1,11 +1,25 @@
 <!-- 
-  +layout.svelteでこう指定する前提です
-  .simplelog:global(.pager .inner){
-  background: <色>
-  border-color: <色>;
+  +layout.svelte style例
+
+  .simplelog :global(a){
+    color: var(--main-color);
+    text-decoration: none;
+    transition: 0.2s ease;
+    background: var(--bg-color);
+    border-color: var(--main-color);
+  }
+  .simplelog :global(a:not(.pager a)) {
+    padding: 0 2px;
+    border-bottom: 1px solid var(--main-color);
+  }
+  .simplelog :global(a:hover) {
+    background: var(--main-color);
+    color: var(--th-color);
+  }
+  .simplelog :global(a:not(.pager a):hover) {
+    border-radius: 0.25rem;
   }
 
-  styleはこれから調整します
 -->
 
 <script lang="ts">
@@ -24,7 +38,7 @@
   {#each offset as i}
     {@const targetIndex = atcIndex + i}
     {#if targetIndex >= 0 && targetIndex < articles.length}
-      <a class="pager-a" href="{resolve(articles[targetIndex].path as any)}">
+      <a href="{resolve(articles[targetIndex].path as any)}">
         <p style="font-size:0.8em">{(i < 0 ? "前" : "次") + "の記事へ"}</p>
         <p style="font-size:1rem; font-weight: 700;">{articles[targetIndex].title as any}</p>
       </a>
