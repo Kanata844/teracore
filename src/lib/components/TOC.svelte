@@ -1,32 +1,9 @@
 <!--
   +layout.svelte style例
+
   .simplelog :global(.toc){
     background-color: <色>;
   }
-
-  +layout.svelte style例
-
-  .simplelog :global(a){
-    color: var(--main-color);
-    text-decoration: none;
-    transition: 0.2s ease;
-    border-color: var(--main-color);
-  }
-  .simplelog :global(a:not(.toc a)) {
-    background: var(--bg-color);
-    padding: 0 2px;
-    border-bottom: 1px solid var(--main-color);
-  }
-  .simplelog :global(a:hover) {
-    background: var(--main-color);
-    color: var(--th-color);
-  }
-  .simplelog :global(a:not(.toc a)):hover) {
-    border-radius: 0.25rem;
-  }
-
-  Pager-556を使う場合は :not(.pager a) も追加
-
 -->
 
 <script lang="ts">

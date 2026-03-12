@@ -131,16 +131,20 @@
     transition: 0.2s ease;
     border-color: var(--main-color);
   }
-  .simplelog :global(a:not(.pager a):not(.toc a)) {
-    background: var(--bg-color);
-    padding: 0 2px;
+  .simplelog :global(a:not(.pager a)) {
     border-bottom: 1px solid var(--main-color);
+  }
+  .simplelog :global(.pager a) {
+    background: var(--bg-color);
+  }
+  .simplelog :global(a:not(.pager a)) {
+    padding: 0 2px;
   }
   .simplelog :global(a:hover) {
     background: var(--main-color);
     color: var(--th-color);
   }
-  .simplelog :global(a:not(.pager a):not(.toc a):hover) {
+  .simplelog :global(a:not(.pager a):hover) {
     border-radius: 0.25rem;
   }
   
