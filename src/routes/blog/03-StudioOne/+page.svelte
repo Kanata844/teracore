@@ -3,8 +3,8 @@
 </script>
 
 <div class="category-page">
-  <h1>音声技術Ⅰ（基礎）</h1> <!--h1にカテゴリnameを入力-->
-  <ArticleList categoryId="03-StudioOne" /> <!--categoryIdにカテゴリidを入力-->
+  <h1>音声技術Ⅰ（基礎）</h1> <!--カテゴリ名を表示-->
+  <ArticleList categoryId="03-StudioOne" /> <!--カテゴリIDで記事の絞り込み-->
 </div>
 
 <style>
