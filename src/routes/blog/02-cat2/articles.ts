@@ -1,6 +1,6 @@
 import type { Article } from "$lib/data";
 
-export const cat = new URL(".", import.meta.url).pathname.split("/").filter(Boolean).at(-1);
+export const url = new URL(".", import.meta.url).pathname;
 
 export const articles: Article[] = [
     {
